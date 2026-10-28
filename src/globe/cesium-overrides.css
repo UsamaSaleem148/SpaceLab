@@ -1,0 +1,32 @@
+/*
+ * Cesium widget chrome restyled to the design system. Selectors are scoped under
+ * .cesium-viewer so they outrank widgets.css regardless of stylesheet order.
+ */
+.cesium-viewer,
+.cesium-widget {
+  width: 100%;
+  height: 100%;
+}
+
+.cesium-widget canvas:focus {
+  outline: none;
+}
+
+/* Required attribution: kept visible, but quiet. */
+.cesium-viewer .cesium-viewer-bottom {
+  /* Viewer.resize() writes inline left/bottom, so !important is the only override. */
+  left: 1rem !important;
+  bottom: calc(0.5rem + env(safe-area-inset-bottom)) !important;
+  opacity: 0.6;
+  transition: opacity 200ms;
+}
+
+.cesium-viewer .cesium-viewer-bottom:hover {
+  opacity: 1;
+}
+
+.cesium-viewer .cesium-widget-credits {
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  color: #94a3b8;
+}

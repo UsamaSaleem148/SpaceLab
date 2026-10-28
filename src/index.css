@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+/* Tokens from design-system/MASTER.md */
+@theme {
+  --color-bg: #0b0b10;
+  --color-surface: rgb(11 11 16 / 0.72);
+  --color-surface-solid: #14141c;
+  --color-border: rgb(148 163 184 / 0.16);
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-accent: #3b82f6;
+  --color-accent-text: #60a5fa;
+  --color-highlight: #f59e0b;
+  --color-danger: #f87171;
+
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply overflow-hidden bg-bg font-sans text-text antialiased;
+    color-scheme: dark;
+  }
+}
