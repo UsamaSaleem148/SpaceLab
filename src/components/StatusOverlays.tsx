@@ -1,11 +1,14 @@
 import { CloseIcon, InfoIcon } from './icons'
 
-/** Full-screen veil shown until the globe has imagery, then faded out. */
+/**
+ * Veil over the globe until it has imagery, then faded out. It sits below the
+ * static header/footer and the panels (z-10 < z-20), so page content stays visible.
+ */
 export function LoadingOverlay({ visible }: { visible: boolean }) {
   return (
     <div
       aria-hidden={!visible}
-      className={`pointer-events-none absolute inset-0 z-30 grid place-items-center bg-bg transition-opacity duration-700 motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
+      className={`pointer-events-none absolute inset-0 z-10 grid place-items-center bg-bg transition-opacity duration-700 motion-reduce:transition-none ${visible ? 'opacity-100' : 'opacity-0'}`}
     >
       <div role="status" className="flex flex-col items-center gap-3">
         <span className="size-2 animate-pulse rounded-full bg-accent motion-reduce:animate-none" />

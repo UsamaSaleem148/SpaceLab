@@ -12,7 +12,7 @@ import {
   type TrackedList,
 } from './tracking/trackedSatellites'
 import { GlobeView } from './components/GlobeView'
-import { Header } from './components/Header'
+import { ClockBar } from './components/ClockBar'
 import { NavControls } from './components/NavControls'
 import { SatellitePanel } from './components/SatellitePanel'
 import { SatelliteSelector, type SatelliteOption } from './components/SatelliteSelector'
@@ -167,7 +167,7 @@ export default function App() {
     <main className="relative h-dvh w-full overflow-hidden bg-bg">
       {/* State setters are stable, so the globe is created once per mount. */}
       <GlobeView onReady={setGlobe} onImageryReady={setImagery} onError={setError} />
-      <Header />
+      <ClockBar />
       <ViewModeToggle mode={mode} onChange={setMode} />
       {imagery === 'offline' && !noticeDismissed && mode === 'terrain' && (
         <ImageryNotice onDismiss={() => setNoticeDismissed(true)} />

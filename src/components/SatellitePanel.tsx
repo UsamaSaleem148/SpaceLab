@@ -31,7 +31,7 @@ export const SatellitePanel = forwardRef<HTMLElement, SatellitePanelProps>(funct
     <section
       ref={ref}
       aria-labelledby="satellite-panel-title"
-      className={`absolute inset-x-4 bottom-[calc(2.75rem+env(safe-area-inset-bottom))] z-20 max-h-[calc(100dvh-9rem)] overflow-y-auto rounded-xl border bg-surface p-4 backdrop-blur-md transition-colors duration-200 sm:inset-x-auto sm:top-18 sm:right-6 sm:bottom-auto sm:w-80 ${
+      className={`absolute inset-x-4 bottom-[calc(3rem+var(--footer-h)+env(safe-area-inset-bottom))] z-20 max-h-[calc(100dvh-9rem-var(--footer-h))] overflow-y-auto sm:max-h-[calc(100dvh-9rem)] rounded-xl border bg-surface p-4 backdrop-blur-md transition-colors duration-200 sm:inset-x-auto sm:top-18 sm:right-6 sm:bottom-auto sm:w-80 ${
         selected ? 'border-highlight/60' : 'border-border'
       }`}
     >

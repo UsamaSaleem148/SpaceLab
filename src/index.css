@@ -17,6 +17,14 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
+/*
+ * Height of the static site footer (index.html). On mobile the satellite panel
+ * sits above it. The default fits its usual three lines; main.tsx keeps it exact.
+ */
+:root {
+  --footer-h: 3.75rem;
+}
+
 @layer base {
   html,
   body,
